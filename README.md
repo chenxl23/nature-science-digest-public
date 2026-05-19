@@ -62,11 +62,15 @@ nature-science-digest/
 
 ## 🚀 部署步骤（10 分钟）
 
-### 第 1 步：创建 GitHub 仓库
+### 第 1 步：Fork 或创建 GitHub 仓库
 
+**方法 1：Fork 本仓库（最简单）**
+点击本页面右上角的 `Fork` 按钮，将代码复制到您自己的 GitHub 账号下。建议将您 Fork 后的仓库设置为 **Private（私有）**，以增加安全性。
+
+**方法 2：新建私有仓库并上传代码**
 1. 登录 [github.com](https://github.com/)，点击右上角 `+` → `New repository`
 2. 仓库名随意，例如 `nature-science-digest`
-4. **重要：选 Private（私有）** —— 即使代码里没有密码，也不要公开
+3. 建议选 **Private（私有）**
 4. 不勾选 "Add a README"（项目里已有），点 `Create repository`
 
 ### 第 2 步：上传代码
@@ -310,7 +314,7 @@ python -m src.main
 
 1. **绝对不要** 把 `.env` 提交到 git（`.gitignore` 已经排除）
 2. **绝对不要** 把 SMTP 授权码硬编码到源代码里
-3. **绝对不要** 把仓库设为 Public（即使代码无密码，Actions 日志也可能泄漏）
+3. **强烈建议** 将您运行 Actions 的仓库设为 Private（即使代码无密码，Actions 日志也有极小概率泄漏运行细节）。如果您是 Fork 本公开仓库，请在 Settings 里将其改为 Private。
 4. 如果授权码意外泄露（聊天、截图、群里），立即去 QQ 邮箱关闭并重开 SMTP 服务作废它
 5. 定期检查 GitHub `Settings → Security log` 看有无异常登录
 
